@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login.dart'; // Mengimpor file login.dart
 
 void main() {
   runApp(const MyApp());
@@ -68,12 +69,12 @@ class HalamanUtama extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const MenuPage(),
+                        builder: (context) => const LoginPage(), // Menuju ke LoginPage
                       ),
                     );
                   },
                   child: const Text(
-                    'Lihat Menu',
+                    'Login',
                     style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
@@ -81,22 +82,6 @@ class HalamanUtama extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class MenuPage extends StatelessWidget {
-  const MenuPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menu King Restoran'),
-      ),
-      body: const Center(
-        child: Text('Menu akan ditampilkan di sini.'),
       ),
     );
   }
